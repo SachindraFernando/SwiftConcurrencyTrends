@@ -9,7 +9,7 @@ import UIKit
 
 func loadImage_GCD(imageView: UIImageView) {
     DispatchQueue.global().async {
-        let image = UIImage(contentsOfFile: "path/to/image.png")
+        let image = UIImage(named: "myImage")
         DispatchQueue.main.async {
             imageView.image = image
         }

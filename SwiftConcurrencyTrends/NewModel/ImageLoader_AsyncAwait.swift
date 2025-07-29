@@ -7,12 +7,12 @@
 
 import UIKit
 
-func loadImageFromDisk() async -> UIImage? {
-    // Simulate async image loading
-    return UIImage(contentsOfFile: "path/to/image.png")
+func loadImageFromAssets() async -> UIImage? {
+    let loader = ImageLoader()
+    return await loader.loadImage(named: "myImage") // Ensure this exists in Assets.xcassets
 }
 
 func loadImage_Async(imageView: UIImageView) async {
-    let image = await loadImageFromDisk()
+    let image = await loadImageFromAssets()
     imageView.image = image
 }

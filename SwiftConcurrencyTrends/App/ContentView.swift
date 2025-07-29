@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var image: UIImage?
+    @State private var image: UIImage?
 
     var body: some View {
         VStack {
@@ -16,15 +16,17 @@ struct ContentView: View {
                 Image(uiImage: img)
                     .resizable()
                     .scaledToFit()
+                    .frame(height: 200)
             } else {
                 ProgressView("Loading...")
             }
         }
         .task {
-            image = await loadImageFromDisk()
+            image = await loadImageFromAssets()
         }
     }
 }
+
 #Preview {
     ContentView()
 }

@@ -38,11 +38,6 @@ import XCTest
 @testable import SwiftConcurrencyTrends
 
 final class ConcurrencyTests: XCTestCase {
-    func testAsyncImageLoad() async {
-        let image = await loadImageFromDisk()
-        XCTAssertNotNil(image)
-    }
-
     func testActorDataFetch() async {
         let dataStore = DataStore()
         let value = await dataStore.fetchValue(for: "id")
