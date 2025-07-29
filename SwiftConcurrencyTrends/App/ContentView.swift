@@ -8,17 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var image: UIImage?
+
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            if let img = image {
+                Image(uiImage: img)
+                    .resizable()
+                    .scaledToFit()
+            } else {
+                ProgressView("Loading...")
+            }
         }
-        .padding()
+        .task {
+            image = await loadImageFromDisk()
+        }
     }
 }
-
 #Preview {
     ContentView()
 }
