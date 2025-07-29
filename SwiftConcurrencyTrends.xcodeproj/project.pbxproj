@@ -14,6 +14,12 @@
 		F65522862E397144004E3809 /* SwiftConcurrencyTrendsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65522852E397144004E3809 /* SwiftConcurrencyTrendsTests.swift */; };
 		F65522902E397144004E3809 /* SwiftConcurrencyTrendsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F655228F2E397144004E3809 /* SwiftConcurrencyTrendsUITests.swift */; };
 		F65522922E397144004E3809 /* SwiftConcurrencyTrendsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65522912E397144004E3809 /* SwiftConcurrencyTrendsUITestsLaunchTests.swift */; };
+		F65522A52E3971F7004E3809 /* ImageLoader_GCD.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65522A42E3971F7004E3809 /* ImageLoader_GCD.swift */; };
+		F65522A72E39720D004E3809 /* ImageLoader_AsyncAwait.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65522A62E39720D004E3809 /* ImageLoader_AsyncAwait.swift */; };
+		F65522A92E397220004E3809 /* ImageLoader_Actor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65522A82E397220004E3809 /* ImageLoader_Actor.swift */; };
+		F65522AB2E397236004E3809 /* AsyncDataAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65522AA2E397236004E3809 /* AsyncDataAccess.swift */; };
+		F65522AD2E397250004E3809 /* CustomExecutorExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65522AC2E397250004E3809 /* CustomExecutorExample.swift */; };
+		F65522AF2E397267004E3809 /* ConcurrencyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65522AE2E397267004E3809 /* ConcurrencyTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +50,12 @@
 		F655228B2E397144004E3809 /* SwiftConcurrencyTrendsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftConcurrencyTrendsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F655228F2E397144004E3809 /* SwiftConcurrencyTrendsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftConcurrencyTrendsUITests.swift; sourceTree = "<group>"; };
 		F65522912E397144004E3809 /* SwiftConcurrencyTrendsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftConcurrencyTrendsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F65522A42E3971F7004E3809 /* ImageLoader_GCD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader_GCD.swift; sourceTree = "<group>"; };
+		F65522A62E39720D004E3809 /* ImageLoader_AsyncAwait.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader_AsyncAwait.swift; sourceTree = "<group>"; };
+		F65522A82E397220004E3809 /* ImageLoader_Actor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader_Actor.swift; sourceTree = "<group>"; };
+		F65522AA2E397236004E3809 /* AsyncDataAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncDataAccess.swift; sourceTree = "<group>"; };
+		F65522AC2E397250004E3809 /* CustomExecutorExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomExecutorExample.swift; sourceTree = "<group>"; };
+		F65522AE2E397267004E3809 /* ConcurrencyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcurrencyTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +106,12 @@
 		F65522732E397143004E3809 /* SwiftConcurrencyTrends */ = {
 			isa = PBXGroup;
 			children = (
-				F65522742E397143004E3809 /* SwiftConcurrencyTrendsApp.swift */,
-				F65522762E397143004E3809 /* ContentView.swift */,
+				F65522A32E3971DE004E3809 /* Tests */,
+				F65522A22E3971CA004E3809 /* Executors */,
+				F65522A12E3971C1004E3809 /* SwiftData */,
+				F65522A02E3971B7004E3809 /* OldModel */,
+				F655229F2E3971A9004E3809 /* NewModel */,
+				F655229E2E397194004E3809 /* App */,
 				F65522782E397144004E3809 /* Assets.xcassets */,
 				F655227A2E397144004E3809 /* Preview Content */,
 			);
@@ -125,6 +141,56 @@
 				F65522912E397144004E3809 /* SwiftConcurrencyTrendsUITestsLaunchTests.swift */,
 			);
 			path = SwiftConcurrencyTrendsUITests;
+			sourceTree = "<group>";
+		};
+		F655229E2E397194004E3809 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F65522742E397143004E3809 /* SwiftConcurrencyTrendsApp.swift */,
+				F65522762E397143004E3809 /* ContentView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		F655229F2E3971A9004E3809 /* NewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F65522A62E39720D004E3809 /* ImageLoader_AsyncAwait.swift */,
+				F65522A82E397220004E3809 /* ImageLoader_Actor.swift */,
+			);
+			path = NewModel;
+			sourceTree = "<group>";
+		};
+		F65522A02E3971B7004E3809 /* OldModel */ = {
+			isa = PBXGroup;
+			children = (
+				F65522A42E3971F7004E3809 /* ImageLoader_GCD.swift */,
+			);
+			path = OldModel;
+			sourceTree = "<group>";
+		};
+		F65522A12E3971C1004E3809 /* SwiftData */ = {
+			isa = PBXGroup;
+			children = (
+				F65522AA2E397236004E3809 /* AsyncDataAccess.swift */,
+			);
+			path = SwiftData;
+			sourceTree = "<group>";
+		};
+		F65522A22E3971CA004E3809 /* Executors */ = {
+			isa = PBXGroup;
+			children = (
+				F65522AC2E397250004E3809 /* CustomExecutorExample.swift */,
+			);
+			path = Executors;
+			sourceTree = "<group>";
+		};
+		F65522A32E3971DE004E3809 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				F65522AE2E397267004E3809 /* ConcurrencyTests.swift */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +323,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F65522A72E39720D004E3809 /* ImageLoader_AsyncAwait.swift in Sources */,
 				F65522772E397143004E3809 /* ContentView.swift in Sources */,
+				F65522A92E397220004E3809 /* ImageLoader_Actor.swift in Sources */,
 				F65522752E397143004E3809 /* SwiftConcurrencyTrendsApp.swift in Sources */,
+				F65522AB2E397236004E3809 /* AsyncDataAccess.swift in Sources */,
+				F65522AD2E397250004E3809 /* CustomExecutorExample.swift in Sources */,
+				F65522A52E3971F7004E3809 /* ImageLoader_GCD.swift in Sources */,
+				F65522AF2E397267004E3809 /* ConcurrencyTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
